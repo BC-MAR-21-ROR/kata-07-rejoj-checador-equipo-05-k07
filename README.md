@@ -57,14 +57,16 @@ The attendance web app must meet the following reuqirements:
 - Framework para pruebas [Rspec](https://rspec.info/) ó [Minitest](https://github.com/seattlerb/minitest)
 
 ## Entregable
-- Código fuente en Github 
+- Código fuente en Github
   - Debe incluir README con información sobre como configurar el proyecto
   - Los commits de Git deben ser significativos
 - Demo de la App correndo en heroku o similar
 - Libertad para utilizar cualquier diseño, imágenes, etc, que considere necesarios y apropiados
 
 ## Setup
-En [este elnace](setup/README.md) se describen los pasos necesarios para ejecutar/probar este proyecto, así como los integrantes de este equipo
+- Database install
+  In order to working with the project, first you need to create the database and then run the migrations execute the next command:
+  rails db:setup
 
 ## Enlaces
 [Encuentra aquí una lista completa de recursos de ayuda](https://github.com/bright-coders/commons/tree/master/topics/resources)
