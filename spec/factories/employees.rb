@@ -23,12 +23,12 @@
 #
 FactoryBot.define do
   factory :employee do
-    email { "MyString" }
-    name { "MyString" }
-    position { "MyString" }
+    sequence(:email) { |n| "user#{n}@mail.com" }
+    name { Faker::Name.name }
+    position { Faker::Job.position }
     employee_number { 1 }
-    private_number { "MyString" }
-    active { false }
-    company_branch { nil }
+    private_number { Faker::Alphanumeric.alpha(number: 10) }
+    active { true }
+    company_branch { create(:company_branch) }
   end
 end
