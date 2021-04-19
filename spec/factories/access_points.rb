@@ -19,8 +19,20 @@
 #
 FactoryBot.define do
   factory :access_point do
-    check { "2021-04-13 21:29:15" }
-    status { 1 }
-    employee { nil }
+    check { Date.today }
+    status { 0 }
+    employee { create(:employee) }
+
+    trait :out do
+      status { 1 }
+    end
+
+    trait :yesterday do
+      check { Date.yesterday }
+    end
+
+    trait :months_ago do
+      check { 2.month.ago }
+    end
   end
 end
