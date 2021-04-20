@@ -24,4 +24,11 @@
 class Employee < ApplicationRecord
   belongs_to :company_branch
   has_many :access_points
+
+  validates :name, :company_branch_id, presence: true
+  validates :email, :private_number, presence: true, uniqueness: true
+
+  scope :active, -> { where(active: true) }
+  scope :inactive, -> { where(active: false) }
+  scope :by_branch, -> (branch_id) { where(company_branch_id: branch_id) }
 end
