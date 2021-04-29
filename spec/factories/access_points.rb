@@ -19,7 +19,7 @@
 #
 FactoryBot.define do
   factory :access_point do
-    check { Date.today }
+    check { DateTime.now }
     status { 0 }
     employee { create(:employee) }
 
